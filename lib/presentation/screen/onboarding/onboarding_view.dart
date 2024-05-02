@@ -4,6 +4,7 @@ import 'package:diary/presentation/widgets/outlined_primary_color_botton.dart';
 import 'package:diary/presentation/widgets/round_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
@@ -42,7 +43,7 @@ class OnBoardingView extends StatelessWidget {
               _buildButtonContainer(
                 context,
                 OutlinedPrimaryColorButton(
-                  onPressed: () {},
+                  onPressed: () => context.push("/login"),
                   text: "시작하기",
                   color: primaryColor,
                 ),
