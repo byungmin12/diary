@@ -55,7 +55,13 @@ class _ImageSliderState extends State<ImageSlider> {
   }
 
   Widget _buildImageItem(String path, double height) {
-    return Center(child: Image.network(path, fit: BoxFit.cover, height: height));
+    return Center(
+        child: Image.network(
+      path,
+      fit: BoxFit.cover,
+      height: height,
+      width: double.infinity,
+    ));
   }
 
   Widget _buildIndicator() {

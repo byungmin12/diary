@@ -5,6 +5,7 @@ import 'package:diary/presentation/widgets/based_text_form_field.dart';
 import 'package:diary/presentation/widgets/outlined_primary_color_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -43,7 +44,10 @@ class LoginView extends StatelessWidget {
           const SizedBox(height: 20),
           const BasedTextFormField(hindText: "비밀번호"),
           const SizedBox(height: 20),
-          _buildButtonContainer(context, OutlinedPrimaryColorButton(text: "로그인", color: primaryColor, radius: 10)),
+          _buildButtonContainer(
+              context,
+              OutlinedPrimaryColorButton(
+                  onPressed: () => context.push("/home"), text: "로그인", color: primaryColor, radius: 10)),
           const SizedBox(height: 15),
           const Row(
             mainAxisAlignment: MainAxisAlignment.end,

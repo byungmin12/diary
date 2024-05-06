@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LoginBloc()..add(const LoginEvent.onInit()),
-      child: LoginView(),
+      child: const LoginView(),
     );
   }
 }
